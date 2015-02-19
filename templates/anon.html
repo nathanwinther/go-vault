@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+{{template "head.inc"}}
+<title>Vault</title>
+<link rel="stylesheet" type="text/css" href="/vault/static/css/home.css">
+</head>
+<body>
+
+    <div id="chrome">
+        <div id="verify">
+            <form action="{{.baseurl}}/verify" class="standard" method="POST">
+                <h1>Vault</h1>
+                <p>
+                    <button class="standard" type="submit">Verify</button>
+                </p>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,602 @@
+/*
+
+Blue
+#4e576b
+
+Light Blue
+#6b7180
+
+Maroon
+#964a59
+
+HelveticaNeue-CondensedBlack
+HelveticaNeue
+Helvetica
+Arial
+sans-serif
+
+*/
+
+*, *:before, *:after {
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+html, body {
+    background-color: #4e576b;
+    color: #fff;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #fff;
+}
+
+#chrome {
+    font-family: HelveticaNeue-Light, HelveticaNeue, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    height: 100%;
+    line-height: 1.25;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 320px;
+}
+
+#sync {
+    background-color: #000;
+    display: none;
+    font-family: HelveticaNeue-CondensedBlack, HelveticaNeue, Helvetica, Arial, sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 480px;
+    margin: 0;
+    opacity: 0.5;
+    padding: 0;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#search {
+    background-color: #000;
+    color: #fff;
+    display: none;
+    font-family: HelveticaNeue-CondensedBlack, HelveticaNeue, Helvetica, Arial, sans-serif;
+    margin: 0;
+    opacity: 0.5;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#search form {
+    border: none 0;
+    margin: 0 auto;
+    padding: 0;
+    width: 320px;
+}
+
+#search form p {
+    margin: 32px;
+    padding: 0;
+}
+
+#search form p.cancel {
+    height: 48px;
+    line-height: 48px;
+    margin: 0 32px;
+    padding: 0;
+    text-align: right;
+}
+
+#search form p.cancel span {
+    cursor: pointer;
+    font-family: HelveticaNeue-CondensedBlack, HelveticaNeue, Helvetica, Arial, sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+#search form p input {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    -webkit-border-radius: 0;
+       -moz-border-radius: 0;
+            border-radius: 0;
+    background-color: transparent;
+    border: none 0;
+    border-bottom: 4px dashed #fff;
+    color: #fff;
+    display: block;
+    font-family: HelveticaNeue-CondensedBlack, HelveticaNeue, Helvetica, Arial, sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#search form p button {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    -webkit-border-radius: 0;
+       -moz-border-radius: 0;
+            border-radius: 0;
+    background-color: transparent;
+    border: none 0;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-family: HelveticaNeue-CondensedBlack, HelveticaNeue, Helvetica, Arial, sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.panel {
+    -webkit-overflow-scrolling: touch;
+    -webkit-transition-duration: 0.5s;
+       -moz-transition-duration: 0.5s;
+            transition-duration: 0.5s;
+    overflow-y: scroll;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.stageLeft {
+    -webkit-transform: translateX(-320px);
+       -moz-transform: translateX(-320px);
+            transform: translateX(-320px);
+}
+
+.stageRight {
+    -webkit-transform: translateX(320px);
+       -moz-transform: translateX(320px);
+            transform: translateX(320px);
+}
+
+#unlock form {
+    border: none 0;
+    margin: 0;
+    padding: 0;
+}
+
+#unlock form p {
+    margin: 32px;
+    padding: 0;
+}
+
+#unlock form p.error {
+    background-color: #964a59;
+    display: none;
+    font-family: HelveticaNeue-CondensedBlack, HelveticaNeue, Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    margin: 0;
+    padding: 32px;
+}
+
+#unlock form p input.password {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    -webkit-border-radius: 0;
+       -moz-border-radius: 0;
+            border-radius: 0;
+    background-color: transparent;
+    border: none 0;
+    border-bottom: 4px dashed #fff;
+    color: #fff;
+    display: block;
+    font-family: HelveticaNeue-CondensedBlack, HelveticaNeue, Helvetica, Arial, sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#unlock form p button.submit {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    -webkit-border-radius: 0;
+       -moz-border-radius: 0;
+            border-radius: 0;
+    background-color: transparent;
+    border: none 0;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-family: HelveticaNeue-CondensedBlack, HelveticaNeue, Helvetica, Arial, sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+#verify form {
+    border: none 0;
+    margin: 0;
+    padding: 0;
+}
+
+#verify h1 {
+    font-family: HelveticaNeue-CondensedBlack, HelveticaNeue, Helvetica, Arial, sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1;
+    margin: 32px;
+    padding: 0;
+    text-align: center;
+}
+
+#verify form p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#verify form p button {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    -webkit-border-radius: 0;
+       -moz-border-radius: 0;
+            border-radius: 0;
+    background-color: transparent;
+    border: solid 1px #6b7180;
+    color: #fff;
+    cursor: pointer;
+    font-family: HelveticaNeue, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1;
+    margin: 0;
+    padding: 8px 16px;
+}
+
+#home.panel ul {
+    list-style-type: none;
+    margin: 65px 32px 32px;
+    padding: 0;
+}
+
+#home.panel ul li {
+    border-top: solid 1px #6b7180;
+    cursor: pointer;
+    margin: 0;
+    padding: 16px 0;
+}
+
+#home.panel ul li:first-child {
+    border-top: none 0;
+}
+
+#home.panel ul li strong {
+    display: block;
+    font-family: HelveticaNeue-CondensedBlack, HelveticaNeue, Helvetica, Arial, sans-serif;
+}
+
+#home.panel ul li span {
+    color: #9096a6;
+}
+
+#view .content {
+    margin: 0;
+    padding: 81px 32px 32px;
+}
+
+#view .content .label {
+    font-family: HelveticaNeue-CondensedBlack, HelveticaNeue, Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    margin: 0;
+    padding: 0 0 0.5em;
+}
+
+#view .content .value {
+    margin: 0;
+    padding: 0 0 1.5em;
+}
+
+#view .content .value.note {
+    white-space: pre-line;
+}
+
+#add form {
+    border: none 0;
+    margin: 0;
+    padding: 81px 32px 32px;
+}
+
+#add fieldset {
+    border: none 0;
+    margin: 0;
+    padding: 0;
+}
+
+#add form p {
+    margin: 0;
+    padding: 0;
+}
+
+#add form p.error {
+    background-color: #964a59;
+    display: none;
+    font-family: HelveticaNeue-CondensedBlack, HelveticaNeue, Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    margin: 0;
+    padding: 16px;
+}
+
+#add form p.label {
+    margin: 1em 0 0.5em;
+}
+
+#add form p.label label {
+    font-family: HelveticaNeue-CondensedBlack, HelveticaNeue, Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+#add form p.value {
+    margin: 0 0 1.5em;
+}
+
+#add form p.value input {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    -webkit-border-radius: 0;
+       -moz-border-radius: 0;
+            border-radius: 0;
+    background-color: #dfdfdf;
+    border: solid 1px #999;
+    color: #000;
+    font-family: HelveticaNeue, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1;
+    margin: 0;
+    padding: 16px;
+    width: 100%;
+}
+
+#add form p.value select {
+    width: 100%;
+}
+
+#add form p.value textarea {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    -webkit-border-radius: 0;
+       -moz-border-radius: 0;
+            border-radius: 0;
+    background-color: #dfdfdf;
+    border: solid 1px #999;
+    color: #000;
+    font-family: HelveticaNeue, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.25;
+    margin: 0;
+    padding: 16px;
+    width: 100%;
+}
+
+#edit form {
+    border: none 0;
+    margin: 0;
+    padding: 81px 32px 32px;
+}
+
+#edit form h3 {
+    font-family: HelveticaNeue-CondensedBlack, HelveticaNeue, Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    margin: 0 0 1.5em;
+    padding: 0;
+}
+
+#edit form p {
+    margin: 0;
+    padding: 0;
+}
+
+#edit form p.error {
+    background-color: #964a59;
+    display: none;
+    font-family: HelveticaNeue-CondensedBlack, HelveticaNeue, Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    margin: 0;
+    padding: 16px;
+}
+
+#edit form p.label {
+    margin: 1em 0 0.5em;
+}
+
+#edit form p.label label {
+    font-family: HelveticaNeue-CondensedBlack, HelveticaNeue, Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+#edit form p.value {
+    margin: 0 0 1.5em;
+}
+
+#edit form p.value input {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    -webkit-border-radius: 0;
+       -moz-border-radius: 0;
+            border-radius: 0;
+    background-color: #dfdfdf;
+    border: solid 1px #999;
+    color: #000;
+    font-family: HelveticaNeue, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1;
+    margin: 0;
+    padding: 16px;
+    width: 100%;
+}
+
+#edit form p.value textarea {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    -webkit-border-radius: 0;
+       -moz-border-radius: 0;
+            border-radius: 0;
+    background-color: #dfdfdf;
+    border: solid 1px #999;
+    color: #000;
+    font-family: HelveticaNeue, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.25;
+    margin: 0;
+    padding: 16px;
+    width: 100%;
+}
+
+#menu {
+    background-color: #4e576b;
+    border-bottom: solid 1px #6b7180;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 64px;
+    width: 100%;
+}
+
+#menu .viewport {
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    height: 64px;
+    width: 320px;
+}
+
+#menu .viewport .menu {
+    -webkit-transition-duration: 0.5s;
+       -moz-transition-duration: 0.5s;
+            transition-duration: 0.5s;
+    display: table-row;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 64px;
+    width: 320px;
+}
+
+#menu .viewport .menu .button {
+    cursor: pointer;
+    display: table-cell;
+    font-family: HelveticaNeue-CondensedBlack, HelveticaNeue-Light, HelveticaNeue, Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    height: 64px;
+    line-height: 64px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#menu .viewport .menu.home .button.add {
+    border-right: solid 1px #6b7180;
+    width: 106px;
+}
+
+#menu .viewport .menu.home .button.blank {
+    border-right: solid 1px #6b7180;
+    width: 106px;
+}
+
+#menu .viewport .menu.home .button.find {
+    width: 108px;
+}
+
+#menu .viewport .menu.view .button.back {
+    border-right: solid 1px #6b7180;
+    width: 106px;
+}
+
+#menu .viewport .menu.view .button.edit {
+    border-right: solid 1px #6b7180;
+    width: 106px;
+}
+
+#menu .viewport .menu.view .button.delete {
+    background-color: #964a59;
+    width: 108px;
+}
+
+#menu .viewport .menu.edit .button.back {
+    border-right: solid 1px #6b7180;
+    width: 106px;
+}
+
+#menu .viewport .menu.edit .button.blank {
+    border-right: solid 1px #6b7180;
+    cursor: auto;
+    width: 106px;
+}
+
+#menu .viewport .menu.edit .button.save {
+    background-color: #964a59;
+    width: 108px;
+}
+
+#menu .viewport .menu.add .button.back {
+    border-right: solid 1px #6b7180;
+    width: 106px;
+}
+
+#menu .viewport .menu.add .button.blank {
+    border-right: solid 1px #6b7180;
+    cursor: auto;
+    width: 106px;
+}
+
+#menu .viewport .menu.add .button.save {
+    background-color: #964a59;
+    width: 108px;
+}
+
+#anon p {
+    font-family: HelveticaNeue-CondensedBlack, HelveticaNeue, Helvetica, Arial, sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1;
+    margin: 32px;
+    padding: 0;
+    text-align: center;
+}
+
+#thankyou p {
+    font-family: HelveticaNeue-CondensedBlack, HelveticaNeue, Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    margin: 32px;
+    padding: 0;
+}
+
